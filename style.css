@@ -1,44 +1,68 @@
-* {
-    box-sizing: border-box;
-    font-family: Arial, tahoma, sans-serif;
-  }
+* 
+{
+  box-sizing: border-box;
+  font-family: Arial, tahoma, sans-serif;
+}
   
-  body {
-    margin: 0;
-    font-family: Arial, tahoma, sans-serif;
-  }
-  
-  /* Style the top navigation bar */
-  .topnav {
-    overflow: hidden;
-    background-color: #333;
-  }
-  
-  /* Style the topnav links */
-  .topnav a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  /* Change color on hover */
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  
-  /* Style the content */
-  .content {
-    background-color: #ddd;
+body {
+  margin: 0;
+  font-family: Arial, tahoma, sans-serif;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: rgb(70, 69, 69);
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style the content */
+.content {
+  background-color: #ddd;
+  padding: 10px;
+}
+
+#div1 {
+    display: inline-block;
+    width:200px;
+    height:220px;
     padding: 10px;
-    height: 700px; /* Should be removed. Only for demonstration */
+    }
+
+#div2 {
+  vertical-align: top;
+  display: inline-block;
+  width:200px;
+  height:220px;
+  padding: 10px;
+  line-height: 15px;
+}
+
+#div3 {
+  vertical-align: top;
+  display: inline-block;
+  width:200px;
+  height:220px;
+  padding: 10px;
   }
   
   /* Style the footer */
   .footer {
-    background-color: #f1f1f1;
+    background-color: rgb(161, 83, 31);
     padding: 10px;
   }
