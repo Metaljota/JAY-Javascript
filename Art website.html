@@ -9,31 +9,32 @@
 </head>
 <body>
 
-<!--==========================TOP LINKS======================================-->
+<!--==========================  TOP LINKS  ======================================-->
 
 <div class="topnav">
-  <a href="#">Link</a>
-  <a href="#">Link</a>
-  <a href="#">Link</a>
-  <p id = pID>coloring</p>
-  <input type="button" id = buttonID value="Language">
+  <select name="Language" id="language">
+    <option> ---Choose Language--- </option>
+    <option value="spanish">Spanish</option>
+    <option value="english">English</option>
+  </select>
 </div>
 
-<!--==========================CONTENT======================================-->
+<!--============================  CONTENT  ======================================-->
 
 <div class="content">
 <!--===Texts===-->
   <div>
-    <h1>The Art Competition</h1>
-    <h2>Welcome to the online Art Competition</h2>
-    <h3><u>instructions:</u></h3>
-    <p>Please draw you art in the canvas bellow using the provided tools.<br>
-    When finished, sleect saved to download your art or clear to start again.</p>
+    <h1 id = "title">Abstract Art Competition</h1>
+    <h2 id = "title2" class = "titleA">Welcome to the online Art Competition</h2>
+    <h3 id = "title3" class = "titleA"><u>instructions:</u></h3>
+    <p id = "instructions">Please draw you art in the canvas bellow using the provided tools.<br>
+    When finished, sleect Save Art to download your art or Clear to start again.<br>
+    Use the form to write down your personal details, upload your art file and click submit. Good Luck!!!</p>
     <br>
   </div>
-<!--The circle--> 
+<!--===The circle===--> 
   <div id="div1" style="border: 1px solid black;">
-    <button id ="drawCircle"; style="position: absolute;">Click here draw a circle</button>
+    <button id ="drawCircle"; style="position: absolute;">Click here to draw a Circle</button>
     <br>
     <br> 
     <input type="color" id="palette" name="palette" value="#e66465">
@@ -54,9 +55,9 @@
     <label>0 - 400</label>
     <br>
   </div>
-<!--The Rectangle-->
+<!--===The Rectangle===-->
   <div id="div2" style="border: 1px solid black;">
-    <button id ="drawRectangle"; style="position: absolute;">Click here draw a rectangle</button>
+    <button id ="drawRectangle"; style="position: absolute;">Click here to draw a Rectangle</button>
     <br>
     <br>
     <input type="color" id="palette2" name="palette" value="#e66465">
@@ -80,21 +81,48 @@
     <label>0 - 400</label>
     <br>
   </div> 
-<!--The Line-->
+<!--===The Line===-->
   <div id="div3" style="border: 1px solid black;">
-    <button id ="drawLine"; style="position: absolute;">Click here draw a line</button>
+    <button id ="drawLine"; style="position: absolute;">Click here to draw a Line</button>
     <br>
+    <br>
+    <input type="color" id="palette3" name="palette" value="#e66465">
+    <label for="palette">Fill color</label>
+    <br>
+    <br>
+    <label for="slider2"><u>Stroke Size</u></label><br>
+    <input type="range" id="slider2" name="slider2" min="0" max="50">
+    <br>
+    <label><u>Starting point</u></label><br>
+    <label for="x">X</label>
+    <input type="number" id="x3" name="x3" min="0" max="400">
+    <label>0 - 400</label>
+    <br>
+    <label for="y">Y</label>
+    <input type="number" id="y3" name="y3" min="0" max="400">
+    <label>0 - 400</label>
+    <br>
+    <label><u>Ending point</u></label><br>
+    <label for="x">X</label>
+    <input type="number" id="x4" name="x4" min="0" max="400">
+    <label>0 - 400</label>
+    <br>
+    <label for="y">Y</label>
+    <input type="number" id="y4" name="y4" min="0" max="400">
+    <label>0 - 400</label>
     <br>
   </div> 
 <!--===CANVAS===-->
   <div>
     <br>
-    <canvas id="myCanvas" width="400" height="400" style="border: 1px solid black;"></canvas><!--canvas-->
+    <canvas id="myCanvas" width="400" height="400" style="border: 2px solid black;"></canvas><!--canvas-->
     <br>
+    <input type="button" id="clear" value="Clear">
+    <a href="#" class="button" id="btn-download" download="my-file-name.png">Save Art</a>
   </div>
 <!--===FORM===--> 
   <div>
-    <h3>Submition</h3>
+    <h3><u>Submition</u></h3>
     <form id="fs-frm" name="file-upload-form" accept-charset="utf-8" action="/test.php" method="post" enctype="multipart/form-data">
     
     <label for="userName">Username</label>
@@ -107,7 +135,7 @@
     <input type="password" id="pwd" name="pwd" required >
 
     <label for="cnfpwd">Confirm Password:</label>
-    <input type="password" id="cnfpwd" name="pwd" required>
+    <input type="password" id="cnfpwd" name="pwd" required><br><br>
 
     <label for="phone">Mobile No.:</label>
     <input type="tel" id="phone" name="phone" size = "18" placeholder="999-999-999" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" >
@@ -122,10 +150,10 @@
 
 </div>
 
-<!--==========================FOOTER======================================-->
+<!--==========================   FOOTER   ======================================-->
 
 <div class="footer">
-  <p>Footer</p>
+  <p>Jay Sierra</p>
 </div>
 
 <script src="canvas.js"></script>
