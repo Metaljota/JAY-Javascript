@@ -3,14 +3,11 @@
 
 let canvas = document.querySelector("#myCanvas");
 let ctx = canvas.getContext("2d");
-  ctx.fillStyle = 'white'; //background color for canvas
-  ctx.fillRect(0,0,canvas.width, canvas.height); //background color for canvas continue
   
   document.querySelector("#drawCircle").addEventListener("click", drawCircle);//calling a funtion to draw a circle
   document.querySelector("#drawRectangle").addEventListener("click", drawRectangle);//calling a funtion to draw a rectangle
   document.querySelector("#drawLine").addEventListener("click", drawLine);//calling a funtion to draw a line
   document.querySelector("#language").addEventListener("click", ChangeLanguage);
-  document.querySelector("#palette").addEventListener("click", myPalette);
   document.querySelector("#cnfpwd").addEventListener('change', validatePassword);
 
   function myPalette(){
@@ -51,9 +48,7 @@ let ctx = canvas.getContext("2d");
   //to clear the canvas
   document.getElementById("clear").addEventListener('click', function() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = 'white';
-    ctx.fillRect(0,0,canvas.width, canvas.height);
-  }, false);
+    }, false);
 
   //an iteration for changing colour on "Instruction"  and wellcome text words. 
   const titles = document.querySelectorAll(".titleA");
@@ -120,12 +115,6 @@ let ctx = canvas.getContext("2d");
     } 
   }
     
-  /*let other = test();
-  console.log(other);
-      function test(){
-      let something = "the test";
-      console.log(something);  
-    }*/
 
 
 
