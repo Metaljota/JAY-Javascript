@@ -69,10 +69,13 @@ let ctx = canvas.getContext("2d");
    
 
   //function for circle
-  function drawCircle(){ 
+  function drawCircle(){
+    let coordinateX = document.querySelector("#x").value;
+    let coordinateY = document.querySelector("#y").value;
+    let theslider = document.querySelector("#slider").value;
+     
     ctx.beginPath();
-    ctx.arc(document.querySelector("#x").value, document.querySelector("#y").value, 
-    document.querySelector("#slider").value, 0, 2 * Math.PI);
+    ctx.arc(coordinateX, coordinateY, theslider, 0, 2 * Math.PI);
     ctx.strokeStyle = "black";
     ctx.stroke();
     ctx.fillStyle = document.querySelector("#palette").value; 
@@ -81,9 +84,13 @@ let ctx = canvas.getContext("2d");
 
   //function for rectangle
   function drawRectangle(){
+    let coordinateX = document.querySelector("#x2").value;
+    let coordinateY = document.querySelector("#y2").value;
+    let theWidth = document.querySelector("#width").value;
+    let theHeight = document.querySelector("#height").value;
+
     ctx.beginPath();
-    ctx.rect(document.querySelector("#x2").value, document.querySelector("#y2").value, 
-    document.querySelector("#width").value, document.querySelector("#height").value);
+    ctx.rect(coordinateX, coordinateY, theWidth, theHeight);
     ctx.fillStyle = document.querySelector("#palette2").value;
     ctx.fill();
     ctx.stroke();
@@ -113,7 +120,12 @@ let ctx = canvas.getContext("2d");
     } 
   }
     
-
+  /*let other = test();
+  console.log(other);
+      function test(){
+      let something = "the test";
+      console.log(something);  
+    }*/
 
 
 
